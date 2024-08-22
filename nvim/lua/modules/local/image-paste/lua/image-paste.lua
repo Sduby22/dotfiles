@@ -5,6 +5,7 @@ local M = {}
 local api = vim.api
 local fn = vim.fn
 
+
 local options = {
   -- The script used to produce te image on STDOUT
   paste_script = [[osascript -e "get the clipboard as «class PNGf»" | sed "s/«data PNGf//; s/»//" | xxd -r -p]],

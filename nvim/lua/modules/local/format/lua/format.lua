@@ -141,7 +141,9 @@ function M.supports_format(client)
   return client.supports_method('textDocument/formatting') or client.supports_method('textDocument/rangeFormatting')
 end
 
+logger.info('out')
 function M.setup(opts)
+  logger.info('in')
   M.opts = opts
   vim.api.nvim_create_autocmd('BufWritePre', {
     group = vim.api.nvim_create_augroup('LazyVimFormat', {}),

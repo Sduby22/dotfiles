@@ -17,14 +17,11 @@ plugin({
       end,
     },
   },
-  config = function()
-    local format = require('format')
-    format.setup({
-      autoformat = true,
-      format_notify = true,
-      disabled_ft = { 'proto' },
-    })
-  end,
+  opts = {
+    autoformat = true,
+    format_notify = true,
+    disabled_ft = { 'proto' },
+  },
 })
 
 plugin({

@@ -11,7 +11,7 @@ plugin({
   build = ':TSUpdate',
   config = conf.nvim_treesitter,
   dependencies = {
-    { 'windwp/nvim-ts-autotag' },
+    { 'windwp/nvim-ts-autotag', opts={} },
     {
       'nvim-treesitter/nvim-treesitter-context',
       opts = {

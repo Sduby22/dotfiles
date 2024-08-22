@@ -57,8 +57,8 @@ local function code()
 end
 
 function Packer.register_local_plugin(repo, mode)
-  repo.dir = modules_dir .. '/local/'
-  repo.name = repo[1]
+  repo.dir = modules_dir .. '/local/' .. repo[1]
+  repo[1] = nil
   Packer.register_plugin(repo, mode)
 end
 

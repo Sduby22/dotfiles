@@ -12,9 +12,6 @@ function config.nvim_treesitter()
         return vim.fn.wordcount().bytes > 1024 * 1024 * 2
       end,
     },
-    autotag = {
-      enable = true,
-    },
     textobjects = {
       select = {
         enable = true,
