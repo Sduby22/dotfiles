@@ -197,7 +197,9 @@
 (map! :g "s-w" 'kill-buffer)
 (map! :g "s-M-t" 'centaur-tabs-kill-other-buffers-in-current-group)
 (map! :g "s-e" (lambda () (interactive) (+treemacs/toggle) (treemacs-follow-mode t)))
-(map! :g "s-t" '+eshell/toggle)
+(map! :g "C-e" (lambda () (interactive) (+treemacs/toggle) (treemacs-follow-mode t)))
+(map! :g "s-t" '+vterm/toggle)
+(map! :g "C-t" '+vterm/toggle)
 
 (setq
  org-download-method 'directory
@@ -205,4 +207,3 @@
  )
 
 (add-to-list 'default-frame-alist '(undecorated-round . t))
-(setq docstr-key-support t)

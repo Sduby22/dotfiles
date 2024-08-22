@@ -11,11 +11,6 @@ plugin({ 'wakatime/vim-wakatime', event = 'InsertEnter' })
 plugin({
   'numToStr/Comment.nvim',
   event = 'BufReadPost',
-  config = function()
-    require('Comment').setup({
-      pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
-    })
-  end,
 }, 'both')
 
 plugin({

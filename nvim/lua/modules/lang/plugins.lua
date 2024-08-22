@@ -41,8 +41,7 @@ plugin({
 
 plugin({
   'nvim-treesitter/nvim-treesitter-textobjects',
-  event = { 'BufReadPost', 'BufNewFile' },
-  dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring' },
+  event = { 'BufReadPost', 'BufNewFile' }
 })
 
 -- plugin({

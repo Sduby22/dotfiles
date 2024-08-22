@@ -1,4 +1,11 @@
 if status is-interactive
+  source ~/.profile
+  source ~/.aliasrc
+
+  if type -q starship
+
+    starship init fish | source
+  end
 
   # Commands to run in interactive sessions can go here
   if [ "$(uname -s)" = "Darwin" ];
@@ -34,8 +41,7 @@ if status is-interactive
   set -Ux PYENV_ROOT $HOME/.pyenv
   set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
   pyenv init - | source
+  pyenv virtualenv-init - | source
   thefuck --alias | source
 
-  source ~/.profile
-  source ~/.aliasrc
 end
